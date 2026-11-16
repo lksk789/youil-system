@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx astro dev --background)",
+      "Bash(npx astro dev status)",
+      "Bash(npx astro dev logs:*)",
+      "Bash(npx astro dev stop)",
+      "Bash(npm run build)",
+      "Bash(npm run preview)",
+      "Bash(npm run check)",
+      "Bash(npm run format)",
+      "Bash(npx astro check)",
+      "Bash(npx astro sync)",
+      "Bash(node -v)",
+      "Bash(npm -v)",
+      "Bash(npm view:*)",
+      "Bash(ls:*)",
+      "mcp__astro-docs__search_astro_docs"
+    ],
+    "ask": [
+      "Bash(npm install:*)",
+      "Bash(npx astro add:*)",
+      "Bash(git push:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}

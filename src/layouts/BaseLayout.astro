@@ -1,0 +1,43 @@
+---
+import Seo from '../components/seo/Seo.astro';
+import JsonLd from '../components/seo/JsonLd.astro';
+import type { Locale } from '../i18n/ui';
+import '../styles/global.css';
+
+interface Props {
+  seo: {
+    title: string;
+    description: string;
+    image?: string;
+    imageAlt?: string;
+    type?: 'website' | 'article';
+    noindex?: boolean;
+    alternates?: boolean;
+    publishedTime?: string;
+  };
+  lang?: Locale;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const { seo, lang = 'en', jsonLd } = Astro.props;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script is:inline>document.documentElement.classList.add('js')</script>
+    <Seo {...seo} lang={lang} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <!-- TODO(design): 본문 웹폰트 preload -->
+    {jsonLd && <JsonLd data={jsonLd} />}
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import '../scripts/motion';
+    </script>
+  </body>
+</html>

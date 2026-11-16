@@ -1,0 +1,34 @@
+/* 자리표시 값. 실제 값은 디자인 단계(frontend-design)에서 확정한다. */
+:root {
+  /* color */
+  --color-bg: #ffffff;
+  --color-fg: #0b1f2e;
+  --color-muted: #5b6b78;
+  --color-accent: #0a5c8a; /* TODO(design): 바다 톤 확정 */
+  --color-border: #dde3e8;
+
+  /* type */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; /* TODO(design): 웹폰트 */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: clamp(2rem, 4vw + 1rem, 3.5rem);
+  --leading-body: 1.6;
+  --leading-tight: 1.2;
+
+  /* space */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+  --content-max: 72rem;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 600ms;
+}

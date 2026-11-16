@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const site = Astro.site!.href;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'YOUIL SYSTEM',
+    alternateName: '유일시스템',
+    url: site,
+    logo: new URL('/favicon.svg', site).href, // TODO(design): 실제 로고
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'YOUIL SYSTEM',
+    url: site,
+    inLanguage: ['en', 'ko'],
+  },
+];
+---
+<BaseLayout
+  lang="en"
+  seo={{
+    title: 'YOUIL SYSTEM',
+    // TODO(content): 실제 회사 소개 요약으로 교체 (70–155자)
+    description:
+      'YOUIL SYSTEM is a Korean manufacturer. Explore our company profile, history, production equipment, certifications and product documents.',
+  }}
+  jsonLd={jsonLd}
+>
+  <main>
+    <h1>YOUIL SYSTEM</h1>
+    <p>Company profile, equipment, certifications and product documents.</p>
+    <p><a href="/ko" hreflang="ko" lang="ko">한국어</a></p>
+    <section data-reveal>
+      <h2>About</h2>
+      <p>TODO(content): company introduction.</p>
+    </section>
+  </main>
+</BaseLayout>

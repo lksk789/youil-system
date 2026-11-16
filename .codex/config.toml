@@ -1,0 +1,13 @@
+# Codex 프로젝트 설정. 이 프로젝트를 Codex에서 "trusted"로 등록해야 로드된다.
+# 규칙은 루트 AGENTS.md, 스킬은 .agents/skills/ 에서 자동으로 읽는다.
+
+# 파일 수정·빌드는 작업 폴더 안에서 자유롭게, 그 밖의 작업은 승인 요청
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+# npm install / create astro 에 네트워크가 필요
+network_access = true
+
+[mcp_servers.astro-docs]
+url = "https://mcp.docs.astro.build/mcp"

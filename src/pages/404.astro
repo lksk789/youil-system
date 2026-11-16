@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  lang="en"
+  seo={{
+    title: 'Page not found',
+    description: 'The page you are looking for does not exist or has been moved.',
+    noindex: true,
+    alternates: false,
+  }}
+>
+  <main>
+    <h1>Page not found</h1>
+    <p>The page you are looking for does not exist or has been moved.</p>
+    <p><a href="/">Go to home</a> · <a href="/ko" lang="ko">홈으로</a></p>
+  </main>
+</BaseLayout>
